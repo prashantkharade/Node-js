@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <script>
+        function checkData(age){
+            if(age>20 && age<18)
+            alert("Your age is not compatible")
+        }
+    </script> -->
+ <link rel="stylesheet" href="valid.js">
+</head>
+<body>
+    <!-- <h1>Registration Form</h1>
+    <form>
+        <fieldset>
+        <legend> Registration information</legend>
+        <label for="" > First Name </label>
+        <input type="text" bind:value="{fname}">
+        <label for="" > Lasst Name </label>
+        <input type="text"  bind:value={lname}>
+        <label for="">Age</label>
+        <input type="number" bind:value="{age}">
+
+        <button onclick="checkData(age)">Submit</button>
+    </fieldset>
+    </form> -->
+
+    <h1>Student Registration</h1>
+    <form>
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" name="firstName" required><br><br>
+  
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName" required><br><br>
+  
+      <label for="age">Age:</label>
+      <input type="text" id="age" name="age" required><br><br>
+  
+     <button onclick="validateForm()">Submit</button>
+    </form>
+    <script src="valid.js">
+        
+    </script>
+</body>
+</html>

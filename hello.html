@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adding Values to Page on Button Click</title>
+    <script>
+        document.getElementById('addValueButton').addEventListener('click', function() {
+    // Create a new element to hold the value
+    var newValue = document.createElement('p');
+    
+    // Set the text content of the new element
+    newValue.textContent = 'New value added!';
+
+    // Get the container where you want to append the new value
+    var valueContainer = document.getElementById('valueContainer');
+    
+    // Append the new value to the container
+    valueContainer.appendChild(newValue);
+});
+
+    </script>
+</head>
+<body>
+    <button id="addValueButton">Add Value</button>
+    <div id="valueContainer" style="height: 100px; width: 100px; background-color: aqua
+    ;"></div>
+
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employee Registration</title>
+  <script>
+    function validateForm() {
+      const dob = new Date(document.getElementById('dob').value);
+      const joiningDate = new Date(document.getElementById('joiningDate').value);
+      const salary = parseFloat(document.getElementById('salary').value);
+
+      // Check if DOB is a valid date
+      if (isNaN(dob) || dob > new Date()) {
+        alert('Please enter a valid Date of Birth.');
+        return false;
+      }
+
+      // Check if Joining Date is a valid date
+      if (isNaN(joiningDate) || joiningDate > new Date()) {
+        alert('Please enter a valid Joining Date.');
+        return false;
+      }
+
+      // Check if Salary is a valid number
+      if (isNaN(salary) || salary <= 0) {
+        alert('Please enter a valid Salary.');
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <h1>Employee Registration</h1>
+  <form onsubmit="return validateForm()">
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required><br><br>
+
+    <label for="joiningDate">Joining Date:</label>
+    <input type="date" id="joiningDate" name="joiningDate" required><br><br>
+
+    <label for="salary">Salary:</label>
+    <input type="number" id="salary" name="salary" min="0" required><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>

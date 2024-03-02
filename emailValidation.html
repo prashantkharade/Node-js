@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <script>
+    function validateEmail() {
+      const email = document.getElementById('email').value;
+      const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+      if (!email.match(emailRegex)) {
+        alert('Please enter a valid email address.');
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <h1>Login</h1>
+  <form onsubmit="return validateEmail()">
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" required><br><br>
+
+    <input type="submit" value="Login">
+  </form>
+</body>
+</html>
